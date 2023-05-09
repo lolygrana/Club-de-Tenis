@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* movile first */
+#desktop{
+    display: none;
+}
+*{
+    margin: 0;
+}
+body{
+    background-color: rgb(63, 132, 217);
+}
+h1{
+    display: grid;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    color: white;
+    font-family: 'Righteous', cursive;
+    text-shadow: 1px -1px 4px #000000;
+}
+.Grancontenedor{
+    display: grid;
+    grid-template-areas:
+    "fp B B Jr"
+    "fp H H Jr";
+    grid-template-columns: 69px 100px 100px 69px;
+    grid-template-rows: 135px 135px;
+    justify-content: center;
+}
+.fp{
+    grid-area: fp;
+    background-image: url(./img/pelota\ 1\ recortada.jpg);
+    border-radius: 9px 0 0 0;
+    background-repeat:round;
+}
+.Bienvenido{
+    grid-area: B;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    font-size: x-large;
+}
+.Horario{
+    grid-area: H;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+.Jugador{
+    grid-area: Jr;
+    background-image: url(./img/jugador\ de\ tenis\ recortada.jpg);
+    border-radius: 0 9px 0 0;
+    background-repeat: round;
+}
+.clases{
+    border: white solid;
+    color: white;
+    background-color: rgb(43, 55, 118);
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* segunda seccion */
+.Grancontenedor2{
+    display: grid;
+    grid-template-areas:
+    "Ja A A fp2"
+    "Ja U U fp2";
+    grid-template-columns: 69px 100px 100px 69px;
+    grid-template-rows: 135px 135px;
+    justify-content: center;
+    padding-top: 1px;
+}
+.Jugadora{
+    grid-area: Ja;
+    background-image: url(./img/jugadora\ de\ tenis\ recortada.jpg);
+    border-radius: 0 0 0 9px;
+    background-repeat:round;
+}
+.Agenda{
+    grid-area: A;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+.Ubicación{
+    grid-area: U;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    padding: 10%;
+}
+.fp2{
+    grid-area: fp2;
+    background-image: url(./img/pelota\ 3.jpg);
+    border-radius: 0 0 9px 0;
+    background-repeat:round;
+}
+/* "acciones" */
+.clases:hover{
+    background-color:rgb(63, 132, 217) ;
+}
+.luz:hover{
+    filter: brightness(180%);
+}
+.titulo:hover{
+    color: rgb(2, 2, 67);
+    text-shadow: 5px -5px 10px white, -5px 5px 10px white,-1px -1px #000000;;
+}
+
+
+/* para desktop */
+@media screen and (min-width: 668px) {
+    #desktop{
+        display:inline;
+    }
+    #movile{
+        display: none;
+    }
+    .tabla{
+        width: 439px;
+        height: 50%;
+        display: flex;
+        flex-flow: column;
+    }
+    thead{
+        background-color: rgb(63, 132, 217);
+        border-bottom: 3px solid #000000;
+        color: bisque;
+    }
+    tbody {
+            width: 25%;
+            text-align: center;
+            background-color: aliceblue;
+            color: rgb(28, 140, 210);
+    }
+    .tabla1{
+        width: 85%;
+        border-collapse: collapse;
+    }
+
+    tr:hover{
+        background-color: #2b3776; 
+        color: aliceblue;   
+    }
+
+    .titulo{
+        padding-bottom: 0%;
+    }
+    .grancontenedor{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        filter: drop-shadow(-2px -4px 15px white);
+    }
+    .section{
+        background-color: #2b3776;
+        border: white solid;
+        color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Righteous', cursive;
+    }
+    .grancontenedor2{
+        display: flex;
+        flex-wrap: wrap;
+        filter: drop-shadow(2px 4px 15px white);
+    }
+    .contenedor{
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+    }
+    .bienvenido{
+        height: 100px;
+        width: 575px;
+        padding-right:10px;
+        border-radius: 22px 0 0 0;
+    }
+    .bienvenido:hover{
+        background: linear-gradient(180deg, rgba(43,55,118,1) 0%, rgba(28,103,220,1) 47%, rgba(55,157,210,1) 91%, rgba(67,197,235,1) 100%);
+    }
+    .jugador{
+        height: 300px;
+        width: 141px;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        }
+    .fotojugador{
+        width: inherit;
+    }
+    .textoimg1{
+        position: absolute;
+        top: 64%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Righteous', cursive;
+        color: #1e1d1d;
+        display: none;
+    }
+    .jugador:hover .textoimg1{
+        display: block;
+    }
+    .jugador:hover{
+        filter: opacity(80%);
+        }
+    .productos{
+        width: 439px;
+        height: 50%;
+    }
+    .productos:hover{
+        background-image: url(./img/productos.jpg);
+
+    }
+    /* texto: "productos" */
+    .animacion{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
+    }
+    .animacion:hover{
+        font-size: 30px;
+        color: white;
+        text-shadow: 3px -3px 4px #000000, -3px 3px 4px #000000 ;
+        animation: animacion 1s 0s;
+    } 
+    @keyframes animacion {
+        0% {font-size: 21px; }
+        100% {font-size: 35px;}
+    }
+    .reglas{
+        width: 439px;
+        height: 50%;
+        background-image: url(./img/pelota\ 1.jpg);
+        background-position: center;
+    }
+    .reglas:hover{
+    background-image: url(./img/pelota\ 1\ oscura.jpg);
+    }
+    .reserva{
+        height: 100px;
+        width: 575px;
+        padding-right: 10px;
+        border-radius: 0 0 0 22px;
+    }
+    .reserva:hover{
+        background: linear-gradient(180deg, rgba(43,55,118,1) 0%, rgba(28,103,220,1) 47%, rgba(55,157,210,1) 91%, rgba(67,197,235,1) 100%);
+    }
+    .horario{
+        height: 100px;
+        width: 575px;
+        order: 1;
+        border-radius: 0 22px 0 0;    
+    }
+    .horario:hover{
+        background: linear-gradient(180deg, rgba(43,55,118,1) 0%, rgba(28,103,220,1) 47%, rgba(55,157,210,1) 91%, rgba(67,197,235,1) 100%);
+    }
+    .jugadora{
+        height: 300px;
+        width: 131px;
+        order: 3;
+        background-image: url(./img/jugadora\ de\ tenis\ recortada.jpg);
+    }
+    .jugadora:hover{
+        filter: opacity(80%);
+    }
+    /* texto de jugadora */
+    .textoimg{
+        height: 50%;
+        padding-top: 113%;
+        width: 100%;
+        font-family: 'Righteous', cursive;
+        display: none; 
+    } 
+    .jugadora:hover .textoimg{
+        display: inline;
+    }
+    .tabla{
+        width: 439px;
+        height: 50%;
+    }
+    .resyen{
+        order: 2;
+    }
+    .blog{
+        width: 439px;
+        height: 50%;
+        display: flex;
+        flex-flow: column;
+    }
+    .blog:hover{
+        background-image: url(./img/fondo\ blog2.jpg);
+        background-position: top;
+    }
+    .ubicación{
+        height: 100px;
+        width: 575px;
+        order: 4;
+        border-radius: 0 0 22px 0;
+        background-image: url(./img/pelota\ 2.jpg);
+        background-position: center;
+        text-shadow: 3px -3px 4px #000000, -3px 3px 4px #000000 ;
+    }
+    .ubicación:hover{
+        filter: brightness(150%);
+        text-shadow: 3px -3px 4px white, -3px 3px 4px white ;
+        color: #000000
+    }
+}
